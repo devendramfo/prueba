@@ -1,7 +1,8 @@
 ﻿<loginTicketRequest>
   <header>
-    <apellido>0</apellido>
-   <nombre>0</nombre>
+    <uniqueId>0</uniqueId>
+    <generationTime>2015-07-30T09:58:50</generationTime>
+    <expirationTime>2015-07-30T10:18:50</expirationTime>
   </header>
   <service>wsfe</service>
 </loginTicketRequest>
