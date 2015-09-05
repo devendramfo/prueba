@@ -1,8 +1,6 @@
 ﻿<loginTicketRequest>
   <header>
-    <uniqueId>0</uniqueId>
-    <generationTime>2015-07-30T09:58:50</generationTime>
-    <expirationTime>2015-07-30T10:18:50</expirationTime>
+cambio esto en el branch
   </header>
   <service>wsfe</service>
 </loginTicketRequest>
