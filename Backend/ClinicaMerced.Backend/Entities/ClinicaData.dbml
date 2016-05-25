@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="clinica" EntityNamespace="ClinicaMerced.Common.Entities" ContextNamespace="ClinicaMerced.Common.Entities" Class="ClinicaDataModelDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=SANTANA\SQLEXPRESS;Initial Catalog=clinica;Integrated Security=True" SettingsObjectName="ClinicaMerced.Backend.Properties.Settings" SettingsPropertyName="clinicaConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.rpt_consultas" Member="rpt_consultas">
+    <Type Name="rpt_consulta">
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ArancelMutual" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Coseguro" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="NombreProfecional" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NombreMutual" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NombreTipoConsulta" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ClinicaModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ClinicaModelStoreContainer">
+    <EntitySet Name="aspnet_Membership" EntityType="ClinicaModel.Store.aspnet_Membership" store:Type="Tables" store:Schema="dbo" store:Name="aspnet_Membership">
+      <DefiningQuery>SELECT 
+      [aspnet_Membership].[ApplicationId] AS [ApplicationId], 
+      [aspnet_Membership].[UserId] AS [UserId], 
+      [aspnet_Membership].[Password] AS [Password], 
+      [aspnet_Membership].[PasswordFormat] AS [PasswordFormat], 
+      [aspnet_Membership].[PasswordSalt] AS [PasswordSalt], 
+      [aspnet_Membership].[MobilePIN] AS [MobilePIN], 
+      [aspnet_Membership].[Email] AS [Email], 
+      [aspnet_Membership].[LoweredEmail] AS [LoweredEmail], 
+      [aspnet_Membership].[PasswordQuestion] AS [PasswordQuestion], 
+      [aspnet_Membership].[PasswordAnswer] AS [PasswordAnswer], 
+      [aspnet_Membership].[IsApproved] AS [IsApproved], 
+      [aspnet_Membership].[IsLockedOut] AS [IsLockedOut], 
+      [aspnet_Membership].[CreateDate] AS [CreateDate], 
+      [aspnet_Membership].[LastLoginDate] AS [LastLoginDate], 
+      [aspnet_Membership].[LastPasswordChangedDate] AS [LastPasswordChangedDate], 
+      [aspnet_Membership].[LastLockoutDate] AS [LastLockoutDate], 
+      [aspnet_Membership].[FailedPasswordAttemptCount] AS [FailedPasswordAttemptCount], 
+      [aspnet_Membership].[FailedPasswordAttemptWindowStart] AS [FailedPasswordAttemptWindowStart], 
+      [aspnet_Membership].[FailedPasswordAnswerAttemptCount] AS [FailedPasswordAnswerAttemptCount], 
+      [aspnet_Membership].[FailedPasswordAnswerAttemptWindowStart] AS [FailedPasswordAnswerAttemptWindowStart], 
+      [aspnet_Membership].[Comment] AS [Comment]
+      FROM [dbo].[aspnet_Membership] AS [aspnet_Membership]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="aspnet_Users" EntityType="ClinicaModel.Store.aspnet_Users" store:Type="Tables" store:Schema="dbo" store:Name="aspnet_Users">
+      <DefiningQuery>SELECT 
+      [aspnet_Users].[ApplicationId] AS [ApplicationId], 
+      [aspnet_Users].[UserId] AS [UserId], 
+      [aspnet_Users].[UserName] AS [UserName], 
+      [aspnet_Users].[LoweredUserName] AS [LoweredUserName], 
+      [aspnet_Users].[MobileAlias] AS [MobileAlias], 
+      [aspnet_Users].[IsAnonymous] AS [IsAnonymous], 
+      [aspnet_Users].[LastActivityDate] AS [LastActivityDate]
+      FROM [dbo].[aspnet_Users] AS [aspnet_Users]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Consulta" EntityType="ClinicaModel.Store.Consulta" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Mutual" EntityType="ClinicaModel.Store.Mutual" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ParamComercial" EntityType="ClinicaModel.Store.ParamComercial" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Profecional" EntityType="ClinicaModel.Store.Profecional" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoParametro" EntityType="ClinicaModel.Store.TipoParametro" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ConsultaView" EntityType="ClinicaModel.Store.ConsultaView" store:Type="Views" store:Schema="dbo" store:Name="ConsultaView">
+      <DefiningQuery>SELECT 
+      [ConsultaView].[IdConsulta] AS [IdConsulta], 
+      [ConsultaView].[IdTipoConsulta] AS [IdTipoConsulta], 
+      [ConsultaView].[IdProfecional] AS [IdProfecional], 
+      [ConsultaView].[IdMutual] AS [IdMutual], 
+      [ConsultaView].[NroAfiliadoMutual] AS [NroAfiliadoMutual], 
+      [ConsultaView].[Fecha] AS [Fecha], 
+      [ConsultaView].[Descripcion] AS [Descripcion], 
+      [ConsultaView].[NombreCliente] AS [NombreCliente], 
+      [ConsultaView].[PresentaOrden] AS [PresentaOrden], 
+      [ConsultaView].[TelefonoCliente] AS [TelefonoCliente], 
+      [ConsultaView].[Coseguro] AS [Coseguro], 
+      [ConsultaView].[ExigeCoseguro] AS [ExigeCoseguro], 
+      [ConsultaView].[ArancelMutual] AS [ArancelMutual], 
+      [ConsultaView].[UserName] AS [UserName], 
+      [ConsultaView].[NombreTipoConsulta] AS [NombreTipoConsulta], 
+      [ConsultaView].[NombreProfesional] AS [NombreProfesional], 
+      [ConsultaView].[ApellidoProfesional] AS [ApellidoProfesional], 
+      [ConsultaView].[NombreMutual] AS [NombreMutual]
+      FROM [dbo].[ConsultaView] AS [ConsultaView]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Rpt_Consulta_Full" EntityType="ClinicaModel.Store.Rpt_Consulta_Full" store:Type="Views" store:Schema="dbo" store:Name="Rpt_Consulta_Full">
+      <DefiningQuery>SELECT 
+      [Rpt_Consulta_Full].[IdProfecional] AS [IdProfecional], 
+      [Rpt_Consulta_Full].[IdMutual] AS [IdMutual], 
+      [Rpt_Consulta_Full].[Fecha] AS [Fecha], 
+      [Rpt_Consulta_Full].[PresentaOrden] AS [PresentaOrden], 
+      [Rpt_Consulta_Full].[Coseguro] AS [Coseguro], 
+      [Rpt_Consulta_Full].[ExigeCoseguro] AS [ExigeCoseguro], 
+      [Rpt_Consulta_Full].[ArancelMutual] AS [ArancelMutual], 
+      [Rpt_Consulta_Full].[IdTipoConsulta] AS [IdTipoConsulta], 
+      [Rpt_Consulta_Full].[TipoConsulta] AS [TipoConsulta], 
+      [Rpt_Consulta_Full].[Profecional] AS [Profecional], 
+      [Rpt_Consulta_Full].[Mutual] AS [Mutual]
+      FROM [dbo].[Rpt_Consulta_Full] AS [Rpt_Consulta_Full]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Consulta_Mutual" Association="ClinicaModel.Store.FK_Consulta_Mutual">
+      <End Role="Mutual" EntitySet="Mutual" />
+      <End Role="Consulta" EntitySet="Consulta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Consulta_ParamComercial" Association="ClinicaModel.Store.FK_Consulta_ParamComercial">
+      <End Role="ParamComercial" EntitySet="ParamComercial" />
+      <End Role="Consulta" EntitySet="Consulta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Consulta_Profecional" Association="ClinicaModel.Store.FK_Consulta_Profecional">
+      <End Role="Profecional" EntitySet="Profecional" />
+      <End Role="Consulta" EntitySet="Consulta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ParamComercial_TipoParametro" Association="ClinicaModel.Store.FK_ParamComercial_TipoParametro">
+      <End Role="TipoParametro" EntitySet="TipoParametro" />
+      <End Role="ParamComercial" EntitySet="ParamComercial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Profecional_ParamComercial" Association="ClinicaModel.Store.FK_Profecional_ParamComercial">
+      <End Role="ParamComercial" EntitySet="ParamComercial" />
+      <End Role="Profecional" EntitySet="Profecional" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipoParametro_TipoParametro" Association="ClinicaModel.Store.FK_TipoParametro_TipoParametro">
+      <End Role="TipoParametro" EntitySet="TipoParametro" />
+      <End Role="TipoParametro1" EntitySet="TipoParametro" />
+    </AssociationSet>
+  </EntityContainer>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'clinica.dbo.aspnet_Membership' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="aspnet_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="PasswordFormat" Type="int" Nullable="false" />
+    <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="MobilePIN" Type="nvarchar" MaxLength="16" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="LoweredEmail" Type="nvarchar" MaxLength="256" />
+    <Property Name="PasswordQuestion" Type="nvarchar" MaxLength="256" />
+    <Property Name="PasswordAnswer" Type="nvarchar" MaxLength="128" />
+    <Property Name="IsApproved" Type="bit" Nullable="false" />
+    <Property Name="IsLockedOut" Type="bit" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="LastLoginDate" Type="datetime" Nullable="false" />
+    <Property Name="LastPasswordChangedDate" Type="datetime" Nullable="false" />
+    <Property Name="LastLockoutDate" Type="datetime" Nullable="false" />
+    <Property Name="FailedPasswordAttemptCount" Type="int" Nullable="false" />
+    <Property Name="FailedPasswordAttemptWindowStart" Type="datetime" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptCount" Type="int" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="datetime" Nullable="false" />
+    <Property Name="Comment" Type="ntext" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'clinica.dbo.aspnet_Users' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="aspnet_Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="LoweredUserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="MobileAlias" Type="nvarchar" MaxLength="16" />
+    <Property Name="IsAnonymous" Type="bit" Nullable="false" />
+    <Property Name="LastActivityDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Consulta">
+    <Key>
+      <PropertyRef Name="IdConsulta" />
+    </Key>
+    <Property Name="IdConsulta" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdTipoConsulta" Type="int" />
+    <Property Name="IdProfecional" Type="int" />
+    <Property Name="IdMutual" Type="int" />
+    <Property Name="NroAfiliadoMutual" Type="varchar" MaxLength="50" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="1000" />
+    <Property Name="NombreCliente" Type="varchar" MaxLength="80" />
+    <Property Name="PresentaOrden" Type="bit" />
+    <Property Name="TelefonoCliente" Type="varchar" MaxLength="20" />
+    <Property Name="Coseguro" Type="decimal" />
+    <Property Name="ExigeCoseguro" Type="bit" />
+    <Property Name="ArancelMutual" Type="decimal" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="Mutual">
+    <Key>
+      <PropertyRef Name="IdMutual" />
+    </Key>
+    <Property Name="IdMutual" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ExigeCoseguro" Type="bit" />
+  </EntityType>
+  <EntityType Name="ParamComercial">
+    <Key>
+      <PropertyRef Name="IdParamComercial" />
+    </Key>
+    <Property Name="IdParamComercial" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="nchar" Nullable="false" MaxLength="50" />
+    <Property Name="IdTipoParametro" Type="int" />
+    <Property Name="IdParamComercialRef" Type="int" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="100" />
+    <Property Name="Vigente" Type="bit" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" />
+    <Property Name="CompanyId" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Profecional">
+    <Key>
+      <PropertyRef Name="IdProfecional" />
+    </Key>
+    <Property Name="IdProfecional" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IdEspecialidad" Type="int" />
+    <Property Name="UserId" Type="uniqueidentifier" />
+    <Property Name="Apellido" Type="varchar" MaxLength="20" />
+    <Property Name="IdTipoProfecional" Type="int" />
+    <Property Name="FechaAlta" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TipoParametro">
+    <Key>
+      <PropertyRef Name="IdTipoParametro" />
+    </Key>
+    <Property Name="IdTipoParametro" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" />
+    <Property Name="IdTipoParametroRelacion" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'clinica.dbo.ConsultaView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ConsultaView">
+    <Key>
+      <PropertyRef Name="IdConsulta" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="NombreTipoConsulta" />
+      <PropertyRef Name="NombreProfesional" />
+      <PropertyRef Name="NombreMutual" />
+    </Key>
+    <Property Name="IdConsulta" Type="int" Nullable="false" />
+    <Property Name="IdTipoConsulta" Type="int" />
+    <Property Name="IdProfecional" Type="int" />
+    <Property Name="IdMutual" Type="int" />
+    <Property Name="NroAfiliadoMutual" Type="varchar" MaxLength="50" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="1000" />
+    <Property Name="NombreCliente" Type="varchar" MaxLength="80" />
+    <Property Name="PresentaOrden" Type="bit" />
+    <Property Name="TelefonoCliente" Type="varchar" MaxLength="20" />
+    <Property Name="Coseguro" Type="decimal" />
+    <Property Name="ExigeCoseguro" Type="bit" />
+    <Property Name="ArancelMutual" Type="decimal" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" />
+    <Property Name="NombreTipoConsulta" Type="nchar" Nullable="false" MaxLength="50" />
+    <Property Name="NombreProfesional" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ApellidoProfesional" Type="varchar" MaxLength="20" />
+    <Property Name="NombreMutual" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'clinica.dbo.Rpt_Consulta_Full' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Rpt_Consulta_Full">
+    <Key>
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="TipoConsulta" />
+      <PropertyRef Name="Profecional" />
+      <PropertyRef Name="Mutual" />
+    </Key>
+    <Property Name="IdProfecional" Type="int" />
+    <Property Name="IdMutual" Type="int" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="PresentaOrden" Type="bit" />
+    <Property Name="Coseguro" Type="decimal" />
+    <Property Name="ExigeCoseguro" Type="bit" />
+    <Property Name="ArancelMutual" Type="decimal" />
+    <Property Name="IdTipoConsulta" Type="int" />
+    <Property Name="TipoConsulta" Type="nchar" Nullable="false" MaxLength="50" />
+    <Property Name="Profecional" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Mutual" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Consulta_Mutual">
+    <End Role="Mutual" Type="ClinicaModel.Store.Mutual" Multiplicity="0..1" />
+    <End Role="Consulta" Type="ClinicaModel.Store.Consulta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mutual">
+        <PropertyRef Name="IdMutual" />
+      </Principal>
+      <Dependent Role="Consulta">
+        <PropertyRef Name="IdMutual" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Consulta_ParamComercial">
+    <End Role="ParamComercial" Type="ClinicaModel.Store.ParamComercial" Multiplicity="0..1" />
+    <End Role="Consulta" Type="ClinicaModel.Store.Consulta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParamComercial">
+        <PropertyRef Name="IdParamComercial" />
+      </Principal>
+      <Dependent Role="Consulta">
+        <PropertyRef Name="IdTipoConsulta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Consulta_Profecional">
+    <End Role="Profecional" Type="ClinicaModel.Store.Profecional" Multiplicity="0..1" />
+    <End Role="Consulta" Type="ClinicaModel.Store.Consulta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Profecional">
+        <PropertyRef Name="IdProfecional" />
+      </Principal>
+      <Dependent Role="Consulta">
+        <PropertyRef Name="IdProfecional" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ParamComercial_TipoParametro">
+    <End Role="TipoParametro" Type="ClinicaModel.Store.TipoParametro" Multiplicity="0..1" />
+    <End Role="ParamComercial" Type="ClinicaModel.Store.ParamComercial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoParametro">
+        <PropertyRef Name="IdTipoParametro" />
+      </Principal>
+      <Dependent Role="ParamComercial">
+        <PropertyRef Name="IdTipoParametro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Profecional_ParamComercial">
+    <End Role="ParamComercial" Type="ClinicaModel.Store.ParamComercial" Multiplicity="0..1" />
+    <End Role="Profecional" Type="ClinicaModel.Store.Profecional" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParamComercial">
+        <PropertyRef Name="IdParamComercial" />
+      </Principal>
+      <Dependent Role="Profecional">
+        <PropertyRef Name="IdEspecialidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipoParametro_TipoParametro">
+    <End Role="TipoParametro" Type="ClinicaModel.Store.TipoParametro" Multiplicity="0..1" />
+    <End Role="TipoParametro1" Type="ClinicaModel.Store.TipoParametro" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoParametro">
+        <PropertyRef Name="IdTipoParametro" />
+      </Principal>
+      <Dependent Role="TipoParametro1">
+        <PropertyRef Name="IdTipoParametroRelacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

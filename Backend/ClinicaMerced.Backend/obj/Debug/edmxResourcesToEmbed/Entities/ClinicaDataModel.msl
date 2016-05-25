@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ClinicaModelStoreContainer" CdmEntityContainer="ClinicaEntities">
+    <EntitySetMapping Name="aspnet_Membership">
+      <EntityTypeMapping TypeName="ClinicaModel.aspnet_Membership">
+        <MappingFragment StoreEntitySet="aspnet_Membership">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="PasswordFormat" ColumnName="PasswordFormat" />
+          <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+          <ScalarProperty Name="MobilePIN" ColumnName="MobilePIN" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LoweredEmail" ColumnName="LoweredEmail" />
+          <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+          <ScalarProperty Name="PasswordAnswer" ColumnName="PasswordAnswer" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+          <ScalarProperty Name="LastLockoutDate" ColumnName="LastLockoutDate" />
+          <ScalarProperty Name="FailedPasswordAttemptCount" ColumnName="FailedPasswordAttemptCount" />
+          <ScalarProperty Name="FailedPasswordAttemptWindowStart" ColumnName="FailedPasswordAttemptWindowStart" />
+          <ScalarProperty Name="FailedPasswordAnswerAttemptCount" ColumnName="FailedPasswordAnswerAttemptCount" />
+          <ScalarProperty Name="FailedPasswordAnswerAttemptWindowStart" ColumnName="FailedPasswordAnswerAttemptWindowStart" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Users">
+      <EntityTypeMapping TypeName="ClinicaModel.aspnet_Users">
+        <MappingFragment StoreEntitySet="aspnet_Users">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="LoweredUserName" ColumnName="LoweredUserName" />
+          <ScalarProperty Name="MobileAlias" ColumnName="MobileAlias" />
+          <ScalarProperty Name="IsAnonymous" ColumnName="IsAnonymous" />
+          <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParamComercial">
+      <EntityTypeMapping TypeName="ClinicaModel.ParamComercial">
+        <MappingFragment StoreEntitySet="ParamComercial">
+          <ScalarProperty Name="IdParamComercial" ColumnName="IdParamComercial" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdTipoParametro" ColumnName="IdTipoParametro" />
+          <ScalarProperty Name="IdParamComercialRef" ColumnName="IdParamComercialRef" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Vigente" ColumnName="Vigente" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoParametro">
+      <EntityTypeMapping TypeName="ClinicaModel.TipoParametro">
+        <MappingFragment StoreEntitySet="TipoParametro">
+          <ScalarProperty Name="IdTipoParametro" ColumnName="IdTipoParametro" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdTipoParametroRelacion" ColumnName="IdTipoParametroRelacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Consulta">
+      <EntityTypeMapping TypeName="ClinicaModel.Consulta">
+        <MappingFragment StoreEntitySet="Consulta">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ArancelMutual" ColumnName="ArancelMutual" />
+          <ScalarProperty Name="ExigeCoseguro" ColumnName="ExigeCoseguro" />
+          <ScalarProperty Name="Coseguro" ColumnName="Coseguro" />
+          <ScalarProperty Name="TelefonoCliente" ColumnName="TelefonoCliente" />
+          <ScalarProperty Name="PresentaOrden" ColumnName="PresentaOrden" />
+          <ScalarProperty Name="NombreCliente" ColumnName="NombreCliente" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="NroAfiliadoMutual" ColumnName="NroAfiliadoMutual" />
+          <ScalarProperty Name="IdMutual" ColumnName="IdMutual" />
+          <ScalarProperty Name="IdProfecional" ColumnName="IdProfecional" />
+          <ScalarProperty Name="IdTipoConsulta" ColumnName="IdTipoConsulta" />
+          <ScalarProperty Name="IdConsulta" ColumnName="IdConsulta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Profecional">
+      <EntityTypeMapping TypeName="ClinicaModel.Profecional">
+        <MappingFragment StoreEntitySet="Profecional">
+          <ScalarProperty Name="FechaAlta" ColumnName="FechaAlta" />
+          <ScalarProperty Name="IdTipoProfecional" ColumnName="IdTipoProfecional" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="IdEspecialidad" ColumnName="IdEspecialidad" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdProfecional" ColumnName="IdProfecional" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mutual">
+      <EntityTypeMapping TypeName="ClinicaModel.Mutual">
+        <MappingFragment StoreEntitySet="Mutual">
+          <ScalarProperty Name="ExigeCoseguro" ColumnName="ExigeCoseguro" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdMutual" ColumnName="IdMutual" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rpt_Consulta_Full">
+      <EntityTypeMapping TypeName="ClinicaModel.Rpt_Consulta_Full">
+        <MappingFragment StoreEntitySet="Rpt_Consulta_Full">
+          <ScalarProperty Name="Mutual" ColumnName="Mutual" />
+          <ScalarProperty Name="Profecional" ColumnName="Profecional" />
+          <ScalarProperty Name="TipoConsulta" ColumnName="TipoConsulta" />
+          <ScalarProperty Name="IdTipoConsulta" ColumnName="IdTipoConsulta" />
+          <ScalarProperty Name="ArancelMutual" ColumnName="ArancelMutual" />
+          <ScalarProperty Name="ExigeCoseguro" ColumnName="ExigeCoseguro" />
+          <ScalarProperty Name="Coseguro" ColumnName="Coseguro" />
+          <ScalarProperty Name="PresentaOrden" ColumnName="PresentaOrden" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="IdMutual" ColumnName="IdMutual" />
+          <ScalarProperty Name="IdProfecional" ColumnName="IdProfecional" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConsultaView">
+      <EntityTypeMapping TypeName="ClinicaModel.ConsultaView">
+        <MappingFragment StoreEntitySet="ConsultaView">
+          <ScalarProperty Name="NombreMutual" ColumnName="NombreMutual" />
+          <ScalarProperty Name="ApellidoProfesional" ColumnName="ApellidoProfesional" />
+          <ScalarProperty Name="NombreProfesional" ColumnName="NombreProfesional" />
+          <ScalarProperty Name="NombreTipoConsulta" ColumnName="NombreTipoConsulta" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ArancelMutual" ColumnName="ArancelMutual" />
+          <ScalarProperty Name="ExigeCoseguro" ColumnName="ExigeCoseguro" />
+          <ScalarProperty Name="Coseguro" ColumnName="Coseguro" />
+          <ScalarProperty Name="TelefonoCliente" ColumnName="TelefonoCliente" />
+          <ScalarProperty Name="PresentaOrden" ColumnName="PresentaOrden" />
+          <ScalarProperty Name="NombreCliente" ColumnName="NombreCliente" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="NroAfiliadoMutual" ColumnName="NroAfiliadoMutual" />
+          <ScalarProperty Name="IdMutual" ColumnName="IdMutual" />
+          <ScalarProperty Name="IdProfecional" ColumnName="IdProfecional" />
+          <ScalarProperty Name="IdTipoConsulta" ColumnName="IdTipoConsulta" />
+          <ScalarProperty Name="IdConsulta" ColumnName="IdConsulta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

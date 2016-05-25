@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1F527917-256D-4CCB-882F-9455FAC00A1A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClinicaMerced.Front</RootNamespace>
+    <AssemblyName>ClinicaMerced.Front</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ClinicaMerced.Front.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>first-aid.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v11.1.Core, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v11.1.Core, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v11.1.Core, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Tutorials.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v11.1.UI, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v11.1.Extensions, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraSpellChecker.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v11.1, Version=11.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fwk.Bases">
+      <HintPath>..\libs\Fwk.Bases.dll</HintPath>
+    </Reference>
+    <Reference Include="Fwk.Bases.Connector">
+      <HintPath>..\libs\Fwk.Bases.Connector.dll</HintPath>
+    </Reference>
+    <Reference Include="Fwk.Security">
+      <HintPath>..\libs\Fwk.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Fwk.UI, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\Fwk.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\Microsoft.Practices.EnterpriseLibrary.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.DebuggerVisualizers, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\Microsoft.VisualStudio.DebuggerVisualizers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClientUserSettings.cs" />
+    <Compile Include="Controller.cs" />
+    <Compile Include="frmImportExternalData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImportExternalData.Designer.cs">
+      <DependentUpon>frmImportExternalData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\Charts\UC_Consulta_SProfecional_ADia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\Charts\UC_Consulta_SProfecional_ADia.Designer.cs">
+      <DependentUpon>UC_Consulta_SProfecional_ADia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\Controls\UC_FitroFechas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\Controls\UC_FitroFechas.Designer.cs">
+      <DependentUpon>UC_FitroFechas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\frm_CierreCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC\frm_CierreCaja.Designer.cs">
+      <DependentUpon>frm_CierreCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC\frmNotAvailable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC\frmNotAvailable.Designer.cs">
+      <DependentUpon>frmNotAvailable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\frm_Base.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC\frm_Base.Designer.cs">
+      <DependentUpon>frm_Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\frm_ConsultaCierreCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC\frm_ConsultaCierreCaja.Designer.cs">
+      <DependentUpon>frm_ConsultaCierreCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\frm_Crear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC\frm_Crear.Designer.cs">
+      <DependentUpon>frm_Crear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\frm_PatientsGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC\frm_PatientsGrid.Designer.cs">
+      <DependentUpon>frm_PatientsGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_Consulta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_Consulta.Designer.cs">
+      <DependentUpon>UC_Consulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_ConsultaCierreCaja.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_ConsultaCierreCaja.Designer.cs">
+      <DependentUpon>UC_ConsultaCierreCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\Controls\UC_FitroConsultaHorizontal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\Controls\UC_FitroConsultaHorizontal.Designer.cs">
+      <DependentUpon>UC_FitroConsultaHorizontal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_Grid_Consultas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_Grid_Consultas.Designer.cs">
+      <DependentUpon>UC_Grid_Consultas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\Controls\UC_Base.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\Controls\UC_Base.Designer.cs">
+      <DependentUpon>UC_Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_Grid_Consultas_Listado.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_Grid_Consultas_Listado.Designer.cs">
+      <DependentUpon>UC_Grid_Consultas_Listado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\Controls\UC_IdList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\Controls\UC_IdList.Designer.cs">
+      <DependentUpon>UC_IdList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UC_VistaDinamicaConsultas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UC_VistaDinamicaConsultas.Designer.cs">
+      <DependentUpon>UC_VistaDinamicaConsultas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\Charts\UC_Consulta_SProfecional_AMes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\Charts\UC_Consulta_SProfecional_AMes.Designer.cs">
+      <DependentUpon>UC_Consulta_SProfecional_AMes.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmImportExternalData.resx">
+      <DependentUpon>frmImportExternalData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\Charts\UC_Consulta_SProfecional_ADia.resx">
+      <DependentUpon>UC_Consulta_SProfecional_ADia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\Controls\UC_FitroFechas.resx">
+      <DependentUpon>UC_FitroFechas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\frm_CierreCaja.resx">
+      <DependentUpon>frm_CierreCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UC\frmNotAvailable.resx">
+      <DependentUpon>frmNotAvailable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\frm_Base.resx">
+      <DependentUpon>frm_Base.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\frm_ConsultaCierreCaja.resx">
+      <DependentUpon>frm_ConsultaCierreCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\frm_Crear.resx">
+      <DependentUpon>frm_Crear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\frm_PatientsGrid.resx">
+      <DependentUpon>frm_PatientsGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_Consulta.resx">
+      <DependentUpon>UC_Consulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_ConsultaCierreCaja.resx">
+      <DependentUpon>UC_ConsultaCierreCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\Controls\UC_FitroConsultaHorizontal.resx">
+      <DependentUpon>UC_FitroConsultaHorizontal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_Grid_Consultas.resx">
+      <DependentUpon>UC_Grid_Consultas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\Controls\UC_Base.resx">
+      <DependentUpon>UC_Base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_Grid_Consultas_Listado.resx">
+      <DependentUpon>UC_Grid_Consultas_Listado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\Controls\UC_IdList.resx">
+      <DependentUpon>UC_IdList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UC_VistaDinamicaConsultas.resx">
+      <DependentUpon>UC_VistaDinamicaConsultas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\Charts\UC_Consulta_SProfecional_AMes.resx">
+      <DependentUpon>UC_Consulta_SProfecional_AMes.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\ClinicaMerced.Common.Entities.Angel.PatientList.datasource" />
+    <None Include="Properties\DataSources\ClinicaMerced.Common.Entities.Caja.vw_ConsultaToCierreCajaDetail.datasource" />
+    <None Include="Properties\DataSources\ClinicaMerced.Common.Entities.CierreCajaDiario.datasource" />
+    <None Include="Properties\DataSources\ClinicaMerced.Common.Entities.Custom.ConsultaGrid.datasource" />
+    <None Include="Properties\DataSources\ClinicaMerced.Common.Entities.Custom.ConsultaGridList.datasource" />
+    <None Include="Properties\DataSources\ClinicaMerced.Common.Entities.MutualBE.datasource" />
+    <None Include="Properties\DataSources\ClinicaMerced.Common.Entities.MutualList.datasource" />
+    <None Include="Properties\DataSources\ClinicaMerced.Common.Entities.ParamComercialBE.datasource" />
+    <None Include="Properties\DataSources\ClinicaMerced.Common.Entities.ProfecionalList.datasource" />
+    <None Include="Properties\DataSources\ClinicaMerced.Common.Entities.Repòrts.rpt_consultas_mes_tipo.datasource" />
+    <None Include="Properties\DataSources\ClinicaMerced.Common.Entities.Rpt_Consulta_FullBE.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Backend\ClinicaMerced.Backend\ClinicaMerced.Backend.csproj">
+      <Project>{1D61953E-DFF9-48E9-90CC-B43BF86F42D9}</Project>
+      <Name>ClinicaMerced.Backend</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="first-aid.ico" />
+    <Content Include="Metasvc.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\copy_24.png" />
+    <None Include="Resources\summary_zoom_32.png" />
+    <None Include="Resources\summary_zoom_48.png" />
+    <None Include="Resources\price.png" />
+    <None Include="Resources\print-preview.png" />
+    <None Include="Resources\db5.png" />
+    <None Include="Resources\confirm_16.png" />
+    <None Include="Resources\cancel_16.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\Shopping Chart.png" />
+    <None Include="Resources\Chart %28Alt 2%29.png" />
+    <None Include="Resources\TitleSoftware.jpg" />
+    <None Include="Resources\search-database-icon.png" />
+    <None Include="Resources\software factory.png" />
+    <None Include="Resources\vcard_32.png" />
+    <None Include="Resources\users_32.png" />
+    <None Include="Resources\user_32.png" />
+    <None Include="Resources\statistic_32.png" />
+    <None Include="Resources\users.png" />
+    <None Include="Resources\statistic_48.png" />
+    <None Include="Resources\vcard.png" />
+    <None Include="Resources\Office_046.ico" />
+    <None Include="Resources\Excel XP.ico" />
+    <None Include="Resources\statics-2_32.png" />
+    <None Include="Resources\statics-1_32.png" />
+    <None Include="Resources\statics_32.png" />
+    <None Include="Resources\save_large.png" />
+    <None Include="Resources\save_as_large.png" />
+    <None Include="Resources\export_32.png" />
+    <None Include="Resources\chart_24.png" />
+    <None Include="Resources\medical_history_pen_48.png" />
+    <None Include="Resources\medical_history_refresh_48.png" />
+    <None Include="Resources\reminders_and_recalls_add_32.png" />
+    <None Include="Resources\reminders_and_recalls_ok_32.png" />
+    <None Include="Resources\reminders_and_recalls_close_32.png" />
+    <None Include="Resources\reminders_and_recalls_clock_32.png" />
+    <None Include="Resources\medical_history_close_48.png" />
+    <None Include="Resources\medical_history_add_48.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

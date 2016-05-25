@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Clinica1" EntityNamespace="ClinicaMerced.Common.Entities.Caja" ContextNamespace="ClinicaMerced.Common.Entities.Caja" Class="ClinicaCajaDataContext" Serialization="Unidirectional" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=SANTANA\SQLEXPRESS;Initial Catalog=Clinica1;Integrated Security=True" SettingsObjectName="ClinicaMerced.Backend.Properties.Settings" SettingsPropertyName="Clinica1ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Profecional" Member="Profecionals">
+    <Type Name="Profecional">
+      <Column Name="IdProfecional" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IdEspecialidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Apellido" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="IdTipoProfecional" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Profecional_CierreCajaDiario" Member="CierreCajaDiarios" ThisKey="IdProfecional" OtherKey="IdProfecional" Type="CierreCajaDiario" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CierreCajaDiario" Member="CierreCajaDiarios">
+    <Type Name="CierreCajaDiario">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IdProfecional" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Coseguro" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Arancel" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="IdTipoIngreso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Association Name="CierreCajaDiario_CierreCajaDiario" Member="CierreCajaDiario2" ThisKey="Id" OtherKey="Id" Type="CierreCajaDiario" Cardinality="One" />
+      <Association Name="CierreCajaDiario_CierreCajaDiario" Member="CierreCajaDiario1" ThisKey="Id" OtherKey="Id" Type="CierreCajaDiario" IsForeignKey="true" />
+      <Association Name="Profecional_CierreCajaDiario" Member="Profecional" ThisKey="IdProfecional" OtherKey="IdProfecional" Type="Profecional" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_ConsultaToCierreCajaDetails" Member="vw_ConsultaToCierreCajaDetails">
+    <Type Name="vw_ConsultaToCierreCajaDetail">
+      <Column Name="IdTipoConsulta" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdProfecional" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="NombreProfecional" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TipoProfecional" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="NombreTipoConsulta" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Coseguro" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ArancelMutual" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="IdIipoProfecional" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="NombreCliente" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="PresentaOrden" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="ExigeCoseguro" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
