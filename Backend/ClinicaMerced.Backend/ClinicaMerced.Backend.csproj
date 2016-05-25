@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1D61953E-DFF9-48E9-90CC-B43BF86F42D9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClinicaMerced.Backend</RootNamespace>
+    <AssemblyName>ClinicaMerced.Backend</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Fwk.Bases">
+      <HintPath>..\..\libs\Fwk.Bases.dll</HintPath>
+    </Reference>
+    <Reference Include="Fwk.Security, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libs\Fwk.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libs\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libs\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libs\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libs\Microsoft.Practices.EnterpriseLibrary.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.3.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libs\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity, Version=6.3.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libs\MySql.Data.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\ClinicaData.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClinicaData.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DAC\AngelDAC.cs" />
+    <Compile Include="DAC\CajaDAC.cs" />
+    <Compile Include="DAC\CommonDAC.cs" />
+    <Compile Include="DAC\ConsultaDAC.cs" />
+    <Compile Include="DAC\ConsultaViewDAC.cs" />
+    <Compile Include="DAC\InsuranceNomenclatorDAC.cs" />
+    <Compile Include="Entities\Angel\Angel.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Angel.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CierreCajaDiario.cs" />
+    <Compile Include="Entities\ClinicaCaja.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClinicaCaja.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ClinicaModel.partial.cs" />
+    <Compile Include="Entities\ConsultaBE.cs" />
+    <Compile Include="Entities\Angel\Patients.cs" />
+    <Compile Include="Entities\Reports\rpt_consultas_mes_tipo.cs" />
+    <Compile Include="Entities\Rpt_Consulta_Full.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="DAC\EstablesIndependientesDAC.cs" />
+    <Compile Include="DAC\ParamComercialBC.cs" />
+    <Compile Include="DAC\ParamComercialDAC.cs" />
+    <Compile Include="Entities\ClinicaDataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClinicaDataModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ClinicaModel.cs" />
+    <Compile Include="Entities\Custom\Consulta_View.cs" />
+    <Compile Include="Entities\ParamComercial.cs" />
+    <Compile Include="helper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Services\CreateParamComercial.cs" />
+    <Compile Include="Services\CreateParamComercialService.cs" />
+    <Compile Include="Services\DeleteParamComercial.cs" />
+    <Compile Include="Services\DeleteParamComercialService.cs" />
+    <Compile Include="Services\SearchAllProfecionalesIsvc.cs" />
+    <Compile Include="Services\SearchAllProfecionalesService.cs" />
+    <Compile Include="Services\SearchParamComercialByParams.cs" />
+    <Compile Include="Services\SearchParamComercialByParamsService.cs" />
+    <EntityDeploy Include="Entities\ClinicaDataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ClinicaDataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="App.Config" />
+    <Compile Include="ClinicaCaja.Partial.cs" />
+    <None Include="Entities\ClinicaData.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>ClinicaData.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Entities\Angel\Angel.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Angel.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Entities\ClinicaCaja.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>ClinicaCaja.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Entities\EntityFwkGen_helper.tt">
+      <TransformOnBuild>False</TransformOnBuild>
+    </None>
+    <None Include="Entities\ClinicaDataModel.tt">
+      <TransformOnBuild>False</TransformOnBuild>
+    </None>
+    <None Include="Properties\DataSources\ClinicaMerced.Backend.Entities.ClinicaEntities.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Metadata\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Entities\Angel\Angel.dbml.layout">
+      <DependentUpon>Angel.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Entities\ClinicaCaja.dbml.layout">
+      <DependentUpon>ClinicaCaja.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Entities\ClinicaData.dbml.layout">
+      <DependentUpon>ClinicaData.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+</Project>

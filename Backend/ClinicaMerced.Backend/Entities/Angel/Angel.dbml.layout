@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Angel">
+  <DataContextMoniker Name="/AngelDataContext" />
+  <nestedChildShapes>
+    <classShape Id="8fc2028e-1f73-481c-bcda-4f545f623362" absoluteBounds="0.75, 0.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/AngelDataContext/nomenclator_practice_group" />
+      <nestedChildShapes>
+        <elementListCompartment Id="faf018f4-6516-4862-9ff9-d2ecfb456927" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1484d02f-4702-49e6-a4ef-3a17e2281c51" absoluteBounds="3.75, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/AngelDataContext/nomenclator" />
+      <nestedChildShapes>
+        <elementListCompartment Id="48d53933-43e7-41f7-8fcc-f3576c48cabb" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4b5c79d2-2c20-421e-b150-39432828ebc5" absoluteBounds="0.75, 3.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/AngelDataContext/nomenclator_expenses_value" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dda336d5-6645-4fcf-a4f2-035c33c9e2a7" absoluteBounds="0.765, 4.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a4d80b61-7dbc-4e94-9b61-9f3f7e92ca10" isExpanded="false" absoluteBounds="3.75, 3.75, 2, 0.45">
+      <DataClassMoniker Name="/AngelDataContext/nomenclator_practice" />
+      <nestedChildShapes>
+        <elementListCompartment Id="78d9ea70-5c2b-4e5b-a098-e8edab98f55e" absoluteBounds="3.765, 4.21, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="36800f89-4d33-4a5f-a86b-f9bc51248af3" absoluteBounds="6.75, 0.75, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/AngelDataContext/medical_insurance_company" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1cf1b2e6-1d45-43df-951a-638876c0a46f" absoluteBounds="6.765, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5deb992e-bc03-4f2c-ab83-bb844e5cde3f" absoluteBounds="6.75, 6.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/AngelDataContext/medicine_covered_plan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1b461827-7424-4786-abea-307fcbc7996a" absoluteBounds="6.765, 7.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="be27ac4b-6c78-4ed4-893a-16a3e39050f4" absoluteBounds="1.375, 6.25, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/AngelDataContext/medical_insurance_plan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e1c211fc-16f0-435a-a70d-4bb7d1f44477" absoluteBounds="1.3900000000000001, 6.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ClinicaModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="ClinicaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="aspnet_Membership" EntityType="ClinicaModel.aspnet_Membership" />
+    <EntitySet Name="aspnet_Users" EntityType="ClinicaModel.aspnet_Users" />
+    <EntitySet Name="ParamComercial" EntityType="ClinicaModel.ParamComercial" />
+    <EntitySet Name="TipoParametro" EntityType="ClinicaModel.TipoParametro" />
+    <AssociationSet Name="FK__aspnet_Me__UserI__2E1BDC42" Association="ClinicaModel.FK__aspnet_Me__UserI__2E1BDC42">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ParamComercial_aspnet_Users" Association="ClinicaModel.FK_ParamComercial_aspnet_Users">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="ParamComercial" EntitySet="ParamComercial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ParamComercial_TipoParametro" Association="ClinicaModel.FK_ParamComercial_TipoParametro">
+      <End Role="TipoParametro" EntitySet="TipoParametro" />
+      <End Role="ParamComercial" EntitySet="ParamComercial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipoParametro_TipoParametro" Association="ClinicaModel.FK_TipoParametro_TipoParametro">
+      <End Role="TipoParametro" EntitySet="TipoParametro" />
+      <End Role="TipoParametro1" EntitySet="TipoParametro" />
+    </AssociationSet>
+    <EntitySet Name="Consulta" EntityType="ClinicaModel.Consulta" />
+    <EntitySet Name="Profecional" EntityType="ClinicaModel.Profecional" />
+    <AssociationSet Name="FK_Consulta_Profecional" Association="ClinicaModel.FK_Consulta_Profecional">
+      <End Role="Profecional" EntitySet="Profecional" />
+      <End Role="Consulta" EntitySet="Consulta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Profecional_ParamComercial" Association="ClinicaModel.FK_Profecional_ParamComercial">
+      <End Role="ParamComercial" EntitySet="ParamComercial" />
+      <End Role="Profecional" EntitySet="Profecional" />
+    </AssociationSet>
+    <EntitySet Name="Mutual" EntityType="ClinicaModel.Mutual" />
+    <AssociationSet Name="FK_Consulta_Mutual" Association="ClinicaModel.FK_Consulta_Mutual">
+      <End Role="Mutual" EntitySet="Mutual" />
+      <End Role="Consulta" EntitySet="Consulta" />
+    </AssociationSet>
+    <EntitySet Name="Rpt_Consulta_Full" EntityType="ClinicaModel.Rpt_Consulta_Full" />
+    <AssociationSet Name="FK_Consulta_ParamComercial" Association="ClinicaModel.FK_Consulta_ParamComercial">
+      <End Role="ParamComercial" EntitySet="ParamComercial" />
+      <End Role="Consulta" EntitySet="Consulta" />
+    </AssociationSet>
+    <EntitySet Name="ConsultaView" EntityType="ClinicaModel.ConsultaView" />
+  </EntityContainer>
+  <EntityType Name="aspnet_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordFormat" Type="Int32" Nullable="false" />
+    <Property Name="PasswordSalt" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="MobilePIN" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredEmail" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordQuestion" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordAnswer" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="IsApproved" Type="Boolean" Nullable="false" />
+    <Property Name="IsLockedOut" Type="Boolean" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+    <Property Name="LastLoginDate" Type="DateTime" Nullable="false" />
+    <Property Name="LastPasswordChangedDate" Type="DateTime" Nullable="false" />
+    <Property Name="LastLockoutDate" Type="DateTime" Nullable="false" />
+    <Property Name="FailedPasswordAttemptCount" Type="Int32" Nullable="false" />
+    <Property Name="FailedPasswordAttemptWindowStart" Type="DateTime" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptCount" Type="Int32" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="DateTime" Nullable="false" />
+    <Property Name="Comment" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="aspnet_Users" Relationship="ClinicaModel.FK__aspnet_Me__UserI__2E1BDC42" FromRole="aspnet_Membership" ToRole="aspnet_Users" />
+  </EntityType>
+  <EntityType Name="aspnet_Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="LoweredUserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="MobileAlias" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
+    <Property Name="IsAnonymous" Type="Boolean" Nullable="false" />
+    <Property Name="LastActivityDate" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="aspnet_Membership" Relationship="ClinicaModel.FK__aspnet_Me__UserI__2E1BDC42" FromRole="aspnet_Users" ToRole="aspnet_Membership" />
+    <NavigationProperty Name="ParamComercial" Relationship="ClinicaModel.FK_ParamComercial_aspnet_Users" FromRole="aspnet_Users" ToRole="ParamComercial" />
+  </EntityType>
+  <EntityType Name="ParamComercial">
+    <Key>
+      <PropertyRef Name="IdParamComercial" />
+    </Key>
+    <Property Name="IdParamComercial" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="IdTipoParametro" Type="Int32" />
+    <Property Name="IdParamComercialRef" Type="Int32" />
+    <Property Name="Descripcion" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Vigente" Type="Boolean" Nullable="false" />
+    <Property Name="UserId" Type="Guid" />
+    <Property Name="CompanyId" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="aspnet_Users" Relationship="ClinicaModel.FK_ParamComercial_aspnet_Users" FromRole="ParamComercial" ToRole="aspnet_Users" />
+    <NavigationProperty Name="TipoParametro" Relationship="ClinicaModel.FK_ParamComercial_TipoParametro" FromRole="ParamComercial" ToRole="TipoParametro" />
+    <NavigationProperty Name="Profecional" Relationship="ClinicaModel.FK_Profecional_ParamComercial" FromRole="ParamComercial" ToRole="Profecional" />
+    <NavigationProperty Name="Consulta" Relationship="ClinicaModel.FK_Consulta_ParamComercial" FromRole="ParamComercial" ToRole="Consulta" />
+  </EntityType>
+  <EntityType Name="TipoParametro">
+    <Key>
+      <PropertyRef Name="IdTipoParametro" />
+    </Key>
+    <Property Name="IdTipoParametro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IdTipoParametroRelacion" Type="Int32" />
+    <NavigationProperty Name="ParamComercial" Relationship="ClinicaModel.FK_ParamComercial_TipoParametro" FromRole="TipoParametro" ToRole="ParamComercial" />
+    <NavigationProperty Name="TipoParametro1" Relationship="ClinicaModel.FK_TipoParametro_TipoParametro" FromRole="TipoParametro" ToRole="TipoParametro1" />
+    <NavigationProperty Name="TipoParametro2" Relationship="ClinicaModel.FK_TipoParametro_TipoParametro" FromRole="TipoParametro1" ToRole="TipoParametro" />
+  </EntityType>
+  <Association Name="FK__aspnet_Me__UserI__2E1BDC42">
+    <End Role="aspnet_Users" Type="ClinicaModel.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_Membership" Type="ClinicaModel.aspnet_Membership" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_Membership">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ParamComercial_aspnet_Users">
+    <End Role="aspnet_Users" Type="ClinicaModel.aspnet_Users" Multiplicity="0..1" />
+    <End Role="ParamComercial" Type="ClinicaModel.ParamComercial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="ParamComercial">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ParamComercial_TipoParametro">
+    <End Role="TipoParametro" Type="ClinicaModel.TipoParametro" Multiplicity="0..1" />
+    <End Role="ParamComercial" Type="ClinicaModel.ParamComercial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoParametro">
+        <PropertyRef Name="IdTipoParametro" />
+      </Principal>
+      <Dependent Role="ParamComercial">
+        <PropertyRef Name="IdTipoParametro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipoParametro_TipoParametro">
+    <End Role="TipoParametro" Type="ClinicaModel.TipoParametro" Multiplicity="0..1" />
+    <End Role="TipoParametro1" Type="ClinicaModel.TipoParametro" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoParametro">
+        <PropertyRef Name="IdTipoParametro" />
+      </Principal>
+      <Dependent Role="TipoParametro1">
+        <PropertyRef Name="IdTipoParametroRelacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Consulta">
+    <Key>
+      <PropertyRef Name="IdConsulta" />
+    </Key>
+    <Property Type="Int32" Name="IdConsulta" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="IdTipoConsulta" />
+    <Property Type="Int32" Name="IdProfecional" />
+    <Property Type="Int32" Name="IdMutual" />
+    <Property Type="String" Name="NroAfiliadoMutual" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Fecha" Nullable="false" />
+    <Property Type="String" Name="Descripcion" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NombreCliente" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="PresentaOrden" />
+    <Property Type="String" Name="TelefonoCliente" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Coseguro" Precision="18" Scale="0" />
+    <NavigationProperty Name="Profecional" Relationship="ClinicaModel.FK_Consulta_Profecional" FromRole="Consulta" ToRole="Profecional" />
+    <NavigationProperty Name="Mutual" Relationship="ClinicaModel.FK_Consulta_Mutual" FromRole="Consulta" ToRole="Mutual" />
+    <Property Type="Boolean" Name="ExigeCoseguro" />
+    <Property Type="Decimal" Name="ArancelMutual" Precision="18" Scale="0" />
+    <Property Type="String" Name="UserName" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ParamComercial" Relationship="ClinicaModel.FK_Consulta_ParamComercial" FromRole="Consulta" ToRole="ParamComercial" />
+  </EntityType>
+  <EntityType Name="Profecional">
+    <Key>
+      <PropertyRef Name="IdProfecional" />
+    </Key>
+    <Property Type="Int32" Name="IdProfecional" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdEspecialidad" />
+    <Property Type="Guid" Name="UserId" />
+    <Property Type="String" Name="Apellido" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Consulta" Relationship="ClinicaModel.FK_Consulta_Profecional" FromRole="Profecional" ToRole="Consulta" />
+    <NavigationProperty Name="ParamComercial" Relationship="ClinicaModel.FK_Profecional_ParamComercial" FromRole="Profecional" ToRole="ParamComercial" />
+    <Property Type="Int32" Name="IdTipoProfecional" />
+    <Property Type="DateTime" Name="FechaAlta" />
+  </EntityType>
+  <Association Name="FK_Consulta_Profecional">
+    <End Type="ClinicaModel.Profecional" Role="Profecional" Multiplicity="0..1" />
+    <End Type="ClinicaModel.Consulta" Role="Consulta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Profecional">
+        <PropertyRef Name="IdProfecional" />
+      </Principal>
+      <Dependent Role="Consulta">
+        <PropertyRef Name="IdProfecional" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Profecional_ParamComercial">
+    <End Type="ClinicaModel.ParamComercial" Role="ParamComercial" Multiplicity="0..1" />
+    <End Type="ClinicaModel.Profecional" Role="Profecional" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParamComercial">
+        <PropertyRef Name="IdParamComercial" />
+      </Principal>
+      <Dependent Role="Profecional">
+        <PropertyRef Name="IdEspecialidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Mutual">
+    <Key>
+      <PropertyRef Name="IdMutual" />
+    </Key>
+    <Property Type="Int32" Name="IdMutual" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Consulta" Relationship="ClinicaModel.FK_Consulta_Mutual" FromRole="Mutual" ToRole="Consulta" />
+    <Property Type="Boolean" Name="ExigeCoseguro" />
+  </EntityType>
+  <Association Name="FK_Consulta_Mutual">
+    <End Type="ClinicaModel.Mutual" Role="Mutual" Multiplicity="0..1" />
+    <End Type="ClinicaModel.Consulta" Role="Consulta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mutual">
+        <PropertyRef Name="IdMutual" />
+      </Principal>
+      <Dependent Role="Consulta">
+        <PropertyRef Name="IdMutual" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Rpt_Consulta_Full">
+    <Key>
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="TipoConsulta" />
+      <PropertyRef Name="Profecional" />
+      <PropertyRef Name="Mutual" />
+    </Key>
+    <Property Type="Int32" Name="IdProfecional" />
+    <Property Type="Int32" Name="IdMutual" />
+    <Property Type="DateTime" Name="Fecha" Nullable="false" />
+    <Property Type="Boolean" Name="PresentaOrden" />
+    <Property Type="Decimal" Name="Coseguro" Precision="18" Scale="0" />
+    <Property Type="Boolean" Name="ExigeCoseguro" />
+    <Property Type="Decimal" Name="ArancelMutual" Precision="18" Scale="0" />
+    <Property Type="Int32" Name="IdTipoConsulta" />
+    <Property Type="String" Name="TipoConsulta" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="Profecional" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Mutual" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_Consulta_ParamComercial">
+    <End Type="ClinicaModel.ParamComercial" Role="ParamComercial" Multiplicity="0..1" />
+    <End Type="ClinicaModel.Consulta" Role="Consulta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParamComercial">
+        <PropertyRef Name="IdParamComercial" />
+      </Principal>
+      <Dependent Role="Consulta">
+        <PropertyRef Name="IdTipoConsulta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ConsultaView">
+    <Key>
+      <PropertyRef Name="IdConsulta" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="NombreTipoConsulta" />
+      <PropertyRef Name="NombreProfesional" />
+      <PropertyRef Name="NombreMutual" />
+    </Key>
+    <Property Type="Int32" Name="IdConsulta" Nullable="false" />
+    <Property Type="Int32" Name="IdTipoConsulta" />
+    <Property Type="Int32" Name="IdProfecional" />
+    <Property Type="Int32" Name="IdMutual" />
+    <Property Type="String" Name="NroAfiliadoMutual" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Fecha" Nullable="false" />
+    <Property Type="String" Name="Descripcion" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NombreCliente" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="PresentaOrden" />
+    <Property Type="String" Name="TelefonoCliente" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Coseguro" Precision="18" Scale="0" />
+    <Property Type="Boolean" Name="ExigeCoseguro" />
+    <Property Type="Decimal" Name="ArancelMutual" Precision="18" Scale="0" />
+    <Property Type="String" Name="UserName" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NombreTipoConsulta" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="NombreProfesional" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ApellidoProfesional" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NombreMutual" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

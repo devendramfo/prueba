@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="ClinicaCaja">
+  <DataContextMoniker Name="/ClinicaCajaDataContext" />
+  <nestedChildShapes>
+    <classShape Id="f4476a3d-d247-4fd7-8d3c-efb9adf0e73f" absoluteBounds="0.75, 3.375, 2, 1.9631982421875">
+      <DataClassMoniker Name="/ClinicaCajaDataContext/Profecional" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3f31cf30-e3a9-4fa9-a614-8649b511891c" absoluteBounds="0.765, 3.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="03ec4c48-3dda-424c-833c-fc05572242e0" absoluteBounds="2.25, 0.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/ClinicaCajaDataContext/CierreCajaDiario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f03f5897-a8ed-4082-8afc-4f43017583f0" absoluteBounds="2.265, 1.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.95923076923077 : 3.03049967447917); (2.95923076923077 : 3.28049967447917); (3.55461538461539 : 3.28049967447917); (3.55461538461539 : 3.03049967447917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClinicaCajaDataContext/CierreCajaDiario/CierreCajaDiario_CierreCajaDiario" />
+      <nodes>
+        <classShapeMoniker Id="03ec4c48-3dda-424c-833c-fc05572242e0" />
+        <classShapeMoniker Id="03ec4c48-3dda-424c-833c-fc05572242e0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 3.375); (2.5 : 3.03049967447917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ClinicaCajaDataContext/Profecional/Profecional_CierreCajaDiario" />
+      <nodes>
+        <classShapeMoniker Id="f4476a3d-d247-4fd7-8d3c-efb9adf0e73f" />
+        <classShapeMoniker Id="03ec4c48-3dda-424c-833c-fc05572242e0" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5d0c07ae-3896-4856-b3ae-3492ae98fad1" absoluteBounds="4.75, 2.625, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/ClinicaCajaDataContext/vw_ConsultaToCierreCajaDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="47257e1f-4ab5-4e90-ae5e-4f14976e3ffa" absoluteBounds="4.765, 3.085, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
